@@ -2,14 +2,14 @@
 // Time: O(n)
 // Space: O(n)
 const compress = (s) => {
-let compressed = "";
+let compressed = [];
 let currChar = s[0];
 let i = 0;
 let counter = 0;
 
 while (i <= s.length) {
   if (s[i] !== currChar) {
-    compressed += shorten(currChar, counter);
+    compressed.push(shorten(currChar, counter));
     currChar = s[i];
     counter = 0;
   }
@@ -18,7 +18,7 @@ while (i <= s.length) {
   i++;
 }
 
-return compressed;
+return compressed.join("");
 };
 
 const shorten = (char, count) => {
