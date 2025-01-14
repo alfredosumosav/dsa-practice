@@ -1,6 +1,6 @@
 // n: The length of the string
 // Time: O(n)
-// Space: O(1)
+// Space: O(n)
 const compress = (s) => {
 let compressed = "";
 let currChar = s[0];
